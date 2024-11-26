@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <cstring>
+#include <cstdlib>
 
 struct People { // type definition
     int age; // member variable
@@ -7,29 +8,23 @@ struct People { // type definition
 };
 
 void PrintPeople(People* a){
-    printf("%s : %i\n", (*a).name, (*a).age);
+    printf("%s : %i\n", a->name, a->age);
 }
 
 void SetAge( People* a, int newAge) {
-    (*a).age = newAge;
+    a->age = newAge;
 }
 
 int main(){
+    People* b;
 
-    People a;
-    People b;
+    b = (People*) malloc(sizeof(People));
+    b->age = 21;
+    strcpy(b->name, "World");
 
-    a.age = 20;
-    strcpy(a.name, "Hello");
-
-    b.age = 21;
-    strcpy(b.name, "World");
-
-    char* cp = (char*) &a;
-    printf("%c\n", cp[5]);
-
-    SetAge(&a, a.age + 1);
-    PrintPeople(&a);
+    SetAge(b, b->age + 1);
+    PrintPeople(b);
+    free(b);
 
     return 0;
 }
