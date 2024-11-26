@@ -1,8 +1,8 @@
 #include <cstdio>
 #include <cstring>
 
-struct People {
-    int age;
+struct People { // type definition
+    int age; // member variable
     char name[10];
 };
 
