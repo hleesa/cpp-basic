@@ -27,7 +27,7 @@ namespace dsu{
         void Print(int i ) { // overloading
             printf("KDerived::Print()\n");
         }
-//        void Print(int i ) { // override
+//        void Print() { // override
 //            printf("KDerived::Print()\n");
 //        }
 
@@ -53,7 +53,7 @@ int main(){
     printf("%i\n", dsu::i);
 
     dsu::KDerived d;
-    d.Print();
+//    d.Print();
     d.Print(3);
 
     int a = 2;
