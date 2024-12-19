@@ -1,0 +1,62 @@
+# 기본적으로 생성되는 빌드 출력물 및 중간 파일들 제외
+## 빌드 출력
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio 프로젝트 관련 파일 제외
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# C++ 특정 빌드 파일들
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.ilk
+*.idb
+*.ipch
+*.log
+*.suo
+*.opensdf
+*.sdf
+*.tlog
+*.lastbuildstate
+
+# 기타 IDE/도구 관련 파일
+.DS_Store
+*.tmp
+*.cache
+*.ide
+*.userosscache
+
+# Windows 관련
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Git 관련
+.git/
+*.orig
+
+# CMake 관련 (사용 중이라면 필요)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+
+# 테스트 관련
+*.log
+Testing/
+
+# 로컬 설정 및 임시 파일들
+*.ipynb_checkpoints
+*.local
+
+# Visual Studio Code 설정 (VSCode를 함께 사용하는 경우)
+.vscode/
+
